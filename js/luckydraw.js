@@ -1,12 +1,15 @@
+var rank = 1;
+
 function drawNext() {
-  var lastdraw = $("#luckyperson").html();
-  var alllucky = $("#drawhistory").html();
-  $("#drawhistory").html(lastdraw + '<br />' + alllucky);
+  var lastdraw = document.getElementById("luckyperson");
+  var alllucky = document.getElementById("drawhistory");
+  alllucky.innerHTML = lastdraw.innerHTML + '<br />' + alllucky.innerHTML;
   var randomnumber = Math.floor(Math.random() * data.length);
   var luckynumber = data[randomnumber];
-  $("#luckyperson").html(luckynumber);
+  lastdraw.innerHTML = '#' + rank + ' ' + luckynumber;
+  rank += 1;
   data.splice(randomnumber,1);
   if (data.length == 0) {
-    $("#btnDraw").prop('disabled', true);
+    document.getElementById("btnDraw").disabled = true;
   }
 }
