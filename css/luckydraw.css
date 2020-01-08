@@ -1,24 +1,17 @@
 body {
-	background-color: #294454;
+	background-color: #179eff;
 	color: #fff;
-	background-image: url(../images/yellow-circles.svg);
-	background-size: 800px 800px;
-	background-position: left -440px top -240px;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 h1 {
-	color: #F3CB02;
+	color: #fff;
 }
 
 #eventname {
-        color: #F3CB02;
-        font-size: 32px;
-}
-
-#sessionname {
-        color: #F3CB02;
+        color: #fff;
         font-size: 64px;
 }
 
@@ -26,4 +19,18 @@ h1 {
 	font-size: 128px;
 }
 
+#btnDraw {
+	color: #4a4a4a;
+	background-color: #fdd835;
+	margin: 15px 0px 0px;
+	padding: 9.5px 55.5px;
+	font-size: 14px;
+	border: 0;
+}
+
+#btnDraw:disabled,
+#btnDraw[disabled] {
+	background-color: #AAA;
+	cursor: not-allowed;
+}
 
